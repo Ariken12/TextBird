@@ -33,14 +33,20 @@ y = 5
 bl = True
 mp = []
 
+for i in range(y):
+    mp.append([])
+    for j in range(x):
+        mp[i].append('')
+
+
 
 while True:
     clear()
     if bl == True:
         bl = False
-        draw(randint(1, x), randint(1, y), True)
+        draw(randint(1, x-2), randint(1, y-2), True)
     else:
         bl = True
-        draw(randint(1, x), randint(1, y), False)
+        draw(randint(1, x-2), randint(1, y-2), False)
     show()
     time.sleep(0)
